@@ -1,0 +1,9 @@
+{% extends '@App/NewswallCore/homepage/index.html.twig' %}
+
+{% block content %}
+    <h1>Product cat (FILTERED)</h1>
+
+    {{
+        render(controller('AppBundle:Default:getContentByCategory', {category: category}))
+    }}
+{% endblock %}

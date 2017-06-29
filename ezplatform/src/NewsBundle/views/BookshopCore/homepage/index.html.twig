@@ -1,0 +1,16 @@
+{% include '@App/NewswallCore/includes/header.html.twig' %}
+
+
+{% block content %}
+    <h1>Product catalogue (FULL)</h1>
+    <p>Here is our complete product cat:</p>
+
+    {{
+        render(
+            controller('AppBundle:Default:getContent', {parentLocationId: 54})
+        )
+    }}
+
+{% endblock %}
+
+{% include '@App/NewswallCore/includes/footer.html.twig' %}

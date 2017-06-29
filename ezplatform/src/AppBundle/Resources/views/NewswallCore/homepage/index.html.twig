@@ -1,0 +1,17 @@
+{% include 'AppBundle:NewswallCore/includes:header.html.twig' %}
+{% include 'AppBundle:NewswallCore/article:article-list.html.twig' %}
+
+<div class="container">
+    {% block content %}
+        <div class="panel">
+            <h1>All news</h1>
+            {{
+                render(
+                    controller('AppBundle:Default:getContent', {parentLocationId: 54})
+                )
+            }}
+        </div>
+    {% endblock %}
+</div>
+
+{% include 'AppBundle:NewswallCore/includes:footer.html.twig' %}

@@ -1,0 +1,14 @@
+ezpublish:
+  system:
+    default:
+      pagelayout: index.html.twig
+      content_view:
+        full:
+          full_home:
+            template: "@App/NewswallCore/homepage/index.html.twig"
+            match:
+              Identifier\ContentType: [folder]
+          full_article:
+            template: "@App/NewswallCore/article/article-list.html.twig"
+            match:
+              Identifier\ContentType: [article]

@@ -1,0 +1,11 @@
+{% extends '@App/NewswallCore/homepage/index.html.twig' %}
+
+{% block content %}
+    <div>
+        <h1>News by category</h1>
+
+        {{
+            render(controller('AppBundle:Default:getContentByCategory', {category: category}))
+        }}
+    </div>
+{% endblock %}
